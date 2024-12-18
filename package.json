@@ -1,0 +1,32 @@
+{
+  "name": "ffffapp-7cbdfff",
+  "private": true,
+  "sideEffects": false,
+  "type": "module",
+  "imports": {
+    "#app/*": "./app/*",
+    "#tests/*": "./tests/*"
+  },
+  "scripts": {
+    "demo": "tsx ./other/build-server.ts",
+    "stripe:webhook-listen": "stripe listen --api-key $(grep STRIPE_CLI_KEY .env | cut -d '=' -f2 | tr -d '\"') --forward-to localhost:3000/webhook",
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "dotenv-cli": "^7.4.2",
+    "node-fetch": "^3.3.2",
+    "source-map-support": "^0.5.21",
+    "stripe": "^16.12.0",
+    "uuid": "^10.0.0",
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/glob": "^8.1.0",
+    "@types/node": "^22.0.0",
+    "@types/set-cookie-parser": "^2.4.7",
+    "@types/source-map-support": "^0.5.10",
+    "tsx": "^4.12.0",
+    "typescript": "^5.4.5",
+    "typescript-eslint": "^7.13.0",
+  },
+}
