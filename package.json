@@ -8,8 +8,8 @@
     "#tests/*": "./tests/*"
   },
   "scripts": {
-    "demo": "tsx ./other/build-server.ts",
-    "stripe:webhook-listen": "stripe listen --api-key $(grep STRIPE_CLI_KEY .env | cut -d '=' -f2 | tr -d '\"') --forward-to localhost:3000/webhook",
+    "demo": "tsx ./test.ts",
+    "stripe:webhook-listen": "stripe listen --api-key $(grep STRIPE_CLI_KEY .env | cut -d '=' -f2 | tr -d '\"') --forward-to localhost:3000/webhook"
   },
   "dependencies": {
     "dotenv": "^16.4.5",
@@ -17,7 +17,7 @@
     "node-fetch": "^3.3.2",
     "source-map-support": "^0.5.21",
     "stripe": "^16.12.0",
-    "uuid": "^10.0.0",
+    "uuid": "^10.0.0"
   },
   "devDependencies": {
     "@types/fs-extra": "^11.0.4",
@@ -27,6 +27,6 @@
     "@types/source-map-support": "^0.5.10",
     "tsx": "^4.12.0",
     "typescript": "^5.4.5",
-    "typescript-eslint": "^7.13.0",
-  },
+    "typescript-eslint": "^7.13.0"
+  }
 }
